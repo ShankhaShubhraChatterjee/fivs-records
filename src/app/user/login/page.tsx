@@ -48,7 +48,7 @@ export default function Login() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex-col gap-2">
-                    <Button type="submit" className="w-full">
+                    <Button type="submit" className="w-full bg-indigo-700 text-white">
                         Login
                     </Button>
                 </CardFooter>
