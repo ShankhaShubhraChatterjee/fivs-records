@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import UmbrellaLogo from '@/../public/umbrella.svg';
+import ThemeLogo from '@/../public/theme.svg';
 
 export default function Navbar() {
     const navigationLinks = [
@@ -27,7 +28,7 @@ export default function Navbar() {
                     })}
                 </nav>
                 <button className="bg-indigo-700 p-2 rounded-full cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <Image src={ThemeLogo} alt="Dark Mode Icon" />
                 </button>
             </section>
         </div>
