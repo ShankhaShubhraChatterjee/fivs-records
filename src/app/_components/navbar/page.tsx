@@ -6,7 +6,7 @@ import ThemeLogo from '@/../public/theme.svg';
 
 export default function Navbar() {
     const navigationLinks = [
-        { id: 1, name: "Login", url: "/login" },
+        { id: 1, name: "Login", url: "/user/login" },
         { id: 2, name: "Contact Us", url: "/contact" }
     ]
     return (
