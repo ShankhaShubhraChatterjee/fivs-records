@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "./_components/navbar/page";
 import Footer from "./_components/footer/page";
 
-import { ThemeProvider } from "./_components/theme/theme-provider";
+import { ThemeProvider } from "../components/theme-provider";
 
 const inter = Inter({ subsets: ['latin'] })
 
