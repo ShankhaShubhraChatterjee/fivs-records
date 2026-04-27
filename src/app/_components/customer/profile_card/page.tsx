@@ -1,10 +1,7 @@
-import { Button } from "@/components/ui/button"
 import {
     Card,
-    CardAction,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -13,7 +10,7 @@ import { Label } from "@/components/ui/label"
 
 export default function InfoCard() {
     return (
-        <Card className="w-full max-w-xl md:w-lg">
+        <Card className="w-full">
             <CardHeader>
                 <CardTitle>Your Profile</CardTitle>
                 <CardDescription>
@@ -21,14 +18,14 @@ export default function InfoCard() {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <form>
+                <div>
                     <div className="flex flex-col gap-6">
                         <div className="grid gap-2">
                             <Label htmlFor="fullname">Name</Label>
                             <Input
                                 id="fullname"
                                 type="text"
-                                placeholder="John Doe"
+                                defaultValue="John Doe"
                                 disabled
                                 className="disabled:opacity-100"
                             />
@@ -38,7 +35,7 @@ export default function InfoCard() {
                             <Input
                                 id="address"
                                 type="text"
-                                placeholder="Nadia, West Bengal, India"
+                                defaultValue="Nadia, West Bengal, India"
                                 disabled
                                 className="disabled:opacity-100"
                             />
@@ -48,7 +45,7 @@ export default function InfoCard() {
                             <Input
                                 id="email"
                                 type="email"
-                                placeholder="johndoe@gmail.com"
+                                defaultValue="random@gmail.com"
                                 disabled
                                 className="disabled:opacity-100"
                             />
@@ -57,10 +54,10 @@ export default function InfoCard() {
                             <div className="flex items-center">
                                 <Label htmlFor="phone">Phone Number</Label>
                             </div>
-                            <Input id="phone" type="text" placeholder="+91 9868885740" disabled className="disabled:opacity-100" />
+                            <Input id="phone" type="text" defaultValue="+91 9868885740" disabled className="disabled:opacity-100" />
                         </div>
                     </div>
-                </form>
+                </div>
             </CardContent>
         </Card>
     )
