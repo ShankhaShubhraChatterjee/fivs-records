@@ -9,10 +9,7 @@ import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuGroup,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Header from "../header/page";
@@ -26,7 +23,7 @@ export default function Navbar() {
         { id: 3, name: "Contact Us", url: "/contact", hide: false }
     ]
     return (
-        <div className="fixed top-1 w-[calc(100%-10px)] flex justify-between items-center px-2 py-2 shadow-lg backdrop-blur-lg mt-2 bg-white/1 rounded-4xl mx-2">
+        <div className="z-10 fixed top-1 w-[calc(100%-10px)] flex justify-between items-center px-2 py-2 shadow-lg backdrop-blur-lg mt-2 bg-white/1 rounded-4xl mx-2">
             <Header />
             <section className="flex justify-center items-center">
 
@@ -49,13 +46,13 @@ export default function Navbar() {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="relative right-2 top-4">
-                        <DropdownMenuItem asChild>
-                            <Link href="/user/login">Login</Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                            <Link href="/contact">Contact</Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem disabled>Log Out</DropdownMenuItem>
+                        {navigationLinks.map((link) => {
+                            if (!link.hide) {
+                                return <DropdownMenuItem key={link.id} asChild>
+                                    <Link href={link.url} className="dark:text-white font-semibold text-center w-full mt-1 rounded-4xl">{link.name}</Link>
+                                </DropdownMenuItem>
+                            }
+                        })}
                     </DropdownMenuContent>
                 </DropdownMenu>
             </section>
