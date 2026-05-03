@@ -1,5 +1,6 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import AppSidebar from "@/components/app-sidebar"
+import { Card } from "@/components/ui/card";
 
 export default function AdminLayout({
   children,
@@ -10,7 +11,7 @@ export default function AdminLayout({
     <div className="">
       <SidebarProvider>
         <AppSidebar />
-        <main className="mt-10">
+        <main className="mt-10 w-full">
           <SidebarTrigger variant="default" className="text-white relative top-18 size-10 left-1 bg-indigo-700 hover:bg-indigo-800" />
           {children}
         </main>
